@@ -1,0 +1,21 @@
+MOOCademy : 
+CREATE TABLE 'courses' ('id_courses' INTEGER PRIMARY KEY AUTOINCREMENT, 'title' TEXT, 'description' TEXT);
+CREATE TABLE 'lessons' ('id_lessons' INTEGER PRIMARY KEY AUTOINCREMENT, 'title' TEXT, 'body' TEXT, 'courses_id' INTEGER NOT NULL);
+
+The Hacking Pinterest : 
+CREATE TABLE 'users' ('users_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'name' TEXT);
+CREATE TABLE 'pins' ('pins_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'url_image' Hyperlink, 'users_id' INTEGER NOT NULL);
+CREATE TABLE 'comments' ('comments_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'comments' TEXT, 'pins_id' INTEGER NOT NULL, 'users_id' INTEGER NOT NULL);
+
+The Hacking News : 
+CREATE TABLE 'users' ('users_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'name' TEXT);
+CREATE TABLE 'links' ('links_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'link' Hyperlink, 'users_id' INTEGER NOT NULL);
+CREATE TABLE 'comment1' ('comment1_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'content' TEXT, 'links_id' INTEGER NOT NULL, 'users_id' INTEGER NOT NULL);
+CREATE TABLE 'comment2' ('comment2_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'content' TEXT, 'links_id' INTEGER NOT NULL, 'users_id' INTEGER NOT NULL);
+CREATE TABLE 'jonction' ('jonction_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'comment1_id' INTEGER NOT NULL, 'comment2_id' INTEGER NOT NULL);
+
+The Hacking Class : 
+CREATE TABLE 'courses' ('courses_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'name' TEXT);
+CREATE TABLE 'students' ('students_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'name' TEXT, 'courses_id' INTEGER NOT NULL);
+
+
