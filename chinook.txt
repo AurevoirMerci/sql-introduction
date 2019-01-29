@@ -1,0 +1,33 @@
+1) SELECT * FROM albums;
+
+2) SELECT * FROM albums WHERE title LIKE 'Great%';
+
+3) SELECT COUNT(AlbumId) FROM albums;
+
+4) DELETE FROM albums WHERE Title LIKE '%music%';
+
+5)
+SELECT * FROM artists WHERE name= 'AC/DC';
+SELECT * FROM albums WHERE ArtistId = 1;
+
+6) 
+SELECT DISTINCT Name FROM tracks WHERE AlbumId = 1 OR AlbumId = 4;
+
+7)
+SELECT * FROM tracks WHERE AlbumId = 4;
+
+8)
+SELECT SUM(UnitPrice) FROM tracks WHERE AlbumId = 4;
+SELECT SUM(Milliseconds) FROM tracks WHERE AlbumId = 4;
+
+9)
+SELECT * FROM artists WHERE name= 'Deep Purple';
+SELECT * FROM albums WHERE ArtistId = 58;
+SELECT SUM(UnitPrice) FROM tracks WHERE AlbumId = 43 OR AlbumId = 50 OR AlbumId = 58 OR AlbumId = 59 OR AlbumId = 60 OR AlbumId = 61 OR AlbumId = 62 OR AlbumId = 63 OR AlbumId = 64 OR AlbumId = 65 OR AlbumId = 66;
+
+10)
+SELECT * FROM artists WHERE name= 'Booba';
+INSERT INTO albums (Title, ArtistId) VALUES ('Temps Mort', 276);
+SELECT * FROM albums WHERE ArtistId = 276;
+(Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES ('100-8 Zoo', 348, 12, 12, 'Tallac Records', 123456789, 99, 100);
+sqlite> SELECT * FROM tracks WHERE Name = '100-8 Zoo';

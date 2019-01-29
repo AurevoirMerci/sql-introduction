@@ -1,0 +1,5 @@
+{courses}
+[courses_id, titre, description]
+
+{lessons}
+[lessons_id, titre, body, courses_id]
